@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset=utf-8>
+  <title>Pierre Jambet</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="Pierre Jambet">
+  <link rel="stylesheet" type="text/css" href="static/css/screen.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+
+  <meta property="og:title" content="Design and Beers Talks" />
+  <meta property="og:url" content="http://www.dbtalks.org" />
+  <meta property="og:image" content="http://www.pierrejambet.com/images/facebook.jpg" />
+  <meta property="og:description" content="" />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $(function () {
+        setTimeout( function() {
+              $('.intro').addClass('animate');
+        }, 500)
+      });
+    });
+    $(document).mousemove(function(e){
+      var $width = ($(document).width())/255;
+      var $height = ($(document).height())/255;
+      var $pageX = parseInt(e.pageX / $width,10);
+      var $pageY = parseInt(e.pageY / $height,10);
+      //$("body").css("background-color", "rgb("+$pageX+","+$pageY+",255)");
+      $("#overlay").css("background-image", "-webkit-linear-gradient(-"+$pageY+"deg,rgba("+$pageX+","+$pageY+",255,0.6),rgba(255,"+$pageY+","+$pageX+",0.8)");
+      //background-image: -webkit-linear-gradient(108deg,#26d0ce,#1a2980 90%);
+    });
+  </script>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+  <img src="static/images/logo.png" alt="Pierre Jambet Logo" class="logo">
+  <legend>* Picture from my hometown Jacou</legend>
+  <div class="intro">
+    <h1>Hello, I'm Pierre</h1>
+    <hr>
+    <p>I'm a web and mobile developer. I specialize in modern web techologies with a special enthusiasm for Ruby on Rails.</p>
+    <a href="/resume">See my resume</a>
+  </div>
+  <div id="overlay"></div>
+</body>
+</html>
