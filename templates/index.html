@@ -29,6 +29,8 @@
       var $pageY = parseInt(e.pageY / $height,10);
       //$("body").css("background-color", "rgb("+$pageX+","+$pageY+",255)");
       $("#overlay").css("background-image", "-webkit-linear-gradient(-"+$pageY+"deg,rgba("+$pageX+","+$pageY+",255,0.6),rgba(255,"+$pageY+","+$pageX+",0.8)");
+      $("#overlay").css("background-image", "-moz-linear-gradient(-"+$pageY+"deg,rgba("+$pageX+","+$pageY+",255,0.6),rgba(255,"+$pageY+","+$pageX+",0.8)");
+      $("#overlay").css("background-image", "-o-linear-gradient(-"+$pageY+"deg,rgba("+$pageX+","+$pageY+",255,0.6),rgba(255,"+$pageY+","+$pageX+",0.8)");
       //background-image: -webkit-linear-gradient(108deg,#26d0ce,#1a2980 90%);
     });
   </script>
