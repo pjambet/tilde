@@ -14,8 +14,20 @@
   <meta property="og:image" content="http://www.pierrejambet.com/images/facebook.jpg" />
   <meta property="og:description" content="" />
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+   <script type="text/javascript" src="static/gyro.min.js"></script>
+   <script type="text/javascript" src="static/modernizr.js"></script>
   <script type="text/javascript">
+
     $(document).ready(function(){
+      if (Modernizr.touch) {
+        gyro.frequency = 20;
+        gyro.startTracking(function(o) {
+          var y = parseInt(o.y*15)
+          var x = parseInt(o.x*15)
+          $("#overlay").css("background-image", "-webkit-linear-gradient(-"+y+"deg,rgba("+x+","+y+",255,0.6),rgba(255,"+y+","+x+",0.8)");
+        });
+      }
       $(function () {
         setTimeout( function() {
               $('.intro').addClass('animate');
