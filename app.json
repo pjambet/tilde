@@ -1,0 +1,6 @@
+{
+  "name": "Pierre Jambet's homepage",
+  "description": "Pierre Jambet's homepage",
+  "repository": "https://github.com/pjambet/tilde",
+  "keywords": ["homepage", "python", "flask"]
+}
