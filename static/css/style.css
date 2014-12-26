@@ -4,6 +4,10 @@
   font-size: 16px;
 }
 
+body {
+  padding-top: 40px;
+}
+
 header ul{
   margin: 0;
   padding: 0;
