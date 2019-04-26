@@ -68,8 +68,17 @@ section{
 li i{
   font-size: 15px;
 }
+
+li p{
+  margin: 10px 0;
+}
+
 p, ol, ul{
   line-height: 1.3em;
+}
+
+ol ul {
+  padding-inline-start: 20px;
 }
 
 ol > li{
